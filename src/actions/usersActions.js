@@ -24,7 +24,7 @@ export function fetchUsers() {
     dispatch(getUsers());
 
     try {
-      const response = await fetch('http://localhost:5000/api/users');
+      const response = await fetch('https://mern-challenge-backend.herokuapp.com/api/users');
       const data = await response.json();
 
       dispatch(getUsersSuccess(data?.data));
